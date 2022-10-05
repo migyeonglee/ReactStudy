@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react</title>
+</head>
+
+<body>
+    <!-- 배열 구조 분해 -->
+    <script>
+        // let obj = {
+        //     key1: "one",
+        //     key2: "two",
+        //     key3: "three"
+        // }
+        // var key3;
+        // console.log("a : ", obj.key1, obj["key2"])
+        // let {
+        //     key1,
+        //     key2,
+
+        // } = obj;
+
+        // console.log("b : ", key1, key2);
+
+        // let arr = ["a", "b"];
+        // // 배열을 구조 분해 시 대괄호 사용 []
+        // let [arr1, arr2, arr3 = "c"] = arr;
+        // console.log("c : ", arr1, arr2, arr3);
+
+        // let x = 1,
+        //     y = 3;
+        // [x, y] = [y, x];
+        // console.log(x, y);
+
+        // console.log("--------------------------------------------------");
+    </script>
+    <!-- 객체 구조 분해 -->
+    <script>
+        // let obj1 = {
+        //     key4: "one",
+        //     key5: "two",
+        //     key6: "three",
+        //     key7: "four"
+        // }
+        // let {
+        //     key4: newkey1,
+        //     key5,
+        //     key6
+        // } = obj1;
+        // console.log("aa : ", key4, newkey1, key5, key6);
+    </script>
+    <script>
+        //  클래스로 객체를 만들 수 있다.
+        // 클래스 안에서 정의되는 함수 = 메서드
+        // 템플릿 이름은 맨 앞자를 대문자로 정의
+        class Cat {
+            // constructor :메서드 문법 => 생성자 
+            // 매개변수 받음
+            constructor(name_input, age_input) {
+                // 속성
+                // this. => 이 class 템플릿 자체를 의미
+                // 어디서든 사용 가능함
+                // console.log(this);
+                this.name = name_input;
+                this.age = age_input;
+
+                console.log(this);
+            }
+
+            // 메소드
+            mew(count) {
+                for (var i = 0; i < count; i++) {
+
+                    console.log(this.name, "야옹");
+                }
+            }
+            eat() {
+                console.log("먹이를 먹습니다.")
+            }
+        }
+
+
+        let cat1 = new Cat('나비', 1);
+        let cat2 = new Cat('냥이', 2);
+        // 나비 야옹 * 5
+        cat1.mew(5);
+        // 냥이 야옹 * 1
+        cat2.mew(1);
+        // 먹이를 먹습니다.
+        cat1.eat();
+
+        // cat2.mew();
+    </script>
+    <script>
+        class Dog {
+            constructor(name, eatting, age) {
+                this.name = name;
+                this.eatting = eatting;
+                this.age = age;
+            }
+            mew(count) {
+                for (var i = 0; i < count; i++) {
+
+                    console.log(this.name, "멍!");
+                }
+            }
+            eat(count) {
+                for (var i = 0; i < count; i++) {
+                    console.log(this.eatting, "냠냐미");
+                }
+            }
+
+        }
+        let dog1 = new Dog("뽀삐", "사료", 2);
+        let dog2 = new Dog("바둑이", "간식", 3);
+
+        dog1.mew(1);
+        dog2.mew(2);
+
+        dog1.eat(3);
+        dog2.eat(4);
+    </script>
+    <script>
+    </script>
+</body>
+
+</html>

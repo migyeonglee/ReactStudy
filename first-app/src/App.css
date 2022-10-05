@@ -1,0 +1,162 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.test {
+    background-color: #faebd7;
+    color: #d2691e;
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+    margin: 30px 20%;
+}
+
+.a {
+    margin-top: 30px;
+    display: flex;
+}
+
+.red {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+.orange {
+    background-color: orange;
+    width: 100px;
+    height: 130px;
+}
+
+.yellow {
+    background-color: yellow;
+    width: 100px;
+    height: 160px;
+}
+
+.green {
+    background-color: green;
+    width: 100px;
+    height: 190px;
+}
+
+.blue {
+    background-color: blue;
+    width: 100px;
+    height: 220px;
+}
+
+.navy {
+    background-color: navy;
+    width: 100px;
+    height: 250px;
+}
+
+.purple {
+    background-color: purple;
+    width: 100px;
+    height: 280px;
+}
+
+.q,
+.w,
+.e,
+.r,
+.t {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.eye {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.mini {
+    position: absolute;
+    left: 8px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.img {
+    position: absolute;
+    width: 500px;
+    height: 100px;
+}
+
+.q {
+    position: relative;
+}
+
+.w,
+.e,
+.r,
+.t {
+    position: absolute;
+}
+
+.w {
+    left: 75px;
+    top: 30px;
+}
+
+.e {
+    left: 70px;
+    top: 40px;
+}
+
+.r {
+    left: 70px;
+    top: 20px;
+}
+
+.t {
+    left: 70px;
+    top: 10px;
+    z-index: 1;
+}
