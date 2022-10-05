@@ -1,0 +1,22 @@
+{
+  "name": "reactstudy",
+  "version": "1.0.0",
+  "description": "react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/migyeonglee/ReactStudy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/migyeonglee/ReactStudy/issues"
+  },
+  "homepage": "https://github.com/migyeonglee/ReactStudy#readme",
+  "dependencies": {
+    "node": "^18.10.0"
+  }
+}
