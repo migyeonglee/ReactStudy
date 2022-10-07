@@ -18,18 +18,22 @@ class ClassState extends Component{
         this.changeNumber=this.changeNumber.bind(this)
         this.changeName=this.changeName.bind(this)
     }
-changeNumber(){
+changeNumber=(e)=>{
+    console.log(e.target.innerText)
     this.setState({number : this.state.number+1});
 }
+// changeNumber(){
+//     this.setState({number : this.state.number+1});
+// }
 changeName(){
     this.setState({name : "모르겠네"})
 }
-    consoleLog(name){
+    consoleLog(e,name){
+        console.log(e.target.innerText);
         console.log(name, "안녕")
     }
     render(){
         // const {number , text} = this.state;
-
 
         return(
             <>
@@ -46,9 +50,10 @@ changeName(){
         <h1>실습</h1>
         {/* <button onClick={this.consoleLog.bind(this,"이미경")}>버튼</button> */}
         <h1>{this.state.number}</h1>
-        <button onClick={this.changeNumber}>+1</button>
+        <button onClick={(e)=>{this.changeNumber(e)}}>+1</button>
         <h1>{this.state.name}</h1>
-        <button onClick={this.changeName}>changeString</button>
+        {/* <button onClick={this.changeName}>changeString</button> */}
+        <button onClick={(e)=>this.consoleLog(e,"반가워")}>changeString</button>
 
 
             </>
