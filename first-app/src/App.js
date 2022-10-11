@@ -1,20 +1,21 @@
 import './App.css';
 // import ClassState from './class';
 // import FunctionState from './function';
-// import Test1 from './test1';
-// import Test2 from './test2';
-import Test3 from './test3';
-import Test4 from './test4';
-import Test33 from './test33';
-import Test44 from './test44';
-// import Handler from './ex/Handler_ex';
+// import Map from './map';
 function App() {
-   
+   let list = ["a","b","c","d","e"];
+  //  items => 배열이 담김
+   let items = list.map((value , id,arr) => {
+    console.log("value : ", value);
+    console.log("id : ", id);
+    console.log("arr : ", arr);
+    return value + id;
+   })
+console.log('items : ',items)
+  //  items = ['a0','b1','c2','d3','e4']
+
   return (
    <>
-
-<Test33></Test33>
-<Test44></Test44>
 
    </>
   );

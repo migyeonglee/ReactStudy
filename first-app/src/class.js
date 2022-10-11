@@ -2,13 +2,7 @@
 import React,{ Component } from "react";
 // import PropTypes from "prop-types";
 class ClassState extends Component{
-    // constructor(props){
-    //     super(props);
-    //     this.state = {
-    //         number : 0,
-    //         text : "안녕하세요"
-    //     };
-    // }
+    
     constructor(props){
         super(props);
         this.state={
@@ -37,16 +31,7 @@ changeName(){
 
         return(
             <>
-          {/* <h1>number : {number}</h1>
-          <h1>text : {text}</h1>
-          <button onClick={()=>{
-              
-              this.setStatWe((prev)=>({number: prev.number+1}))
-              this.setState((prev)=>{
-                return{number: prev.number+1}
-            })
-            // this.setState({number: this.state.number + 1})
-        }}>change</button> */}
+          
         <h1>실습</h1>
         {/* <button onClick={this.consoleLog.bind(this,"이미경")}>버튼</button> */}
         <h1>{this.state.number}</h1>
