@@ -24,18 +24,24 @@ class App extends Component {
   render() {
   return (
    <>
-    <Ref></Ref>
-   <hr />
-  <ScrollBox></ScrollBox>
-   <hr />
-   <div>
+   
+     <Ref></Ref>
+     <hr />
+    <ScrollBox></ScrollBox>
+    <hr />
+    <div>
         <button onClick={()=>{this.setState({value: !this.state.value})}}>컴포넌트 바껴라!</button>
         <button onClick={this.handleClick}>랜덤 색상</button>
         { this.state.value ? <LifeCycle color={this.state.color} /> : <div />}
-    </div>
+     </div>
+     <hr />
+
+    
    </>
   );
 }
 }
 
 export default App;
+
+

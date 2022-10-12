@@ -19,10 +19,17 @@ class LifeCycle extends Component {
         if(nextProps.color !== prevState.color) {
             return {color: nextProps.color};
         }
+        // 변경을 안시킬 경우 null
         return null;
     }
- 
     componentDidMount() {
+        //  컴포넌트가 마운트된 직후, 즉 트리에 삽입된 직후에 호출
+        //  render가 일어난 후 실행됌
+        var num = 0;
+        this.time = setInterval(()=>{
+            console.log("time : ", num);
+            num++;
+        },1000);
         console.log('componentDidMount');
     }
  
@@ -40,6 +47,9 @@ class LifeCycle extends Component {
     }
  
     getSnapshotBeforeUpdate(prevProps, prevState) {
+        // 가장 마지막으로 렌더링된 결과가 DOM 등에 반영되기 전에 호출
+        // 생명주기 메서드가 반환하는 값은 componentDidUpdate()에 인자로 전달
+        // 스냅샷 값을 반환하거나 null을 반환
         console.log('getSnapshotBeforeUpdate');
  
         if(prevProps.color !== this.props.color) {
@@ -49,6 +59,7 @@ class LifeCycle extends Component {
     }
  
     componentDidUpdate(prevProps, prevState, snapshot) {
+        // 갱신이 일어난 직후에 호출됩니다. 이 메서드는 최초 렌더링에서는 호출되지 않습니다.
         console.log('componentDidUpdate', prevProps, prevState);
  
         if(snapshot) {
@@ -57,6 +68,10 @@ class LifeCycle extends Component {
     }
 
     componentWillUnmount(){
+        // 컴포넌트가 DOM 상에서 제거될 시 호출
+        // 내에서 setState()호출 금지,
+        //  컴포넌트 인스턴스가 마운트 해제 시 절대 다시 마운트되지 않기 때문
+        clearInterval(this.time);
         console.log("componentWillUnmount");
     }
  
@@ -83,6 +98,7 @@ export default LifeCycle;
 /*
 mount => DOM이 생성되고 웹 브라우저상에 나타나는 것
 마운트 시 호출되는 메서드
+(순서대로 호출)
 - constructor
 - render
 - getDerivedStateFromProps
@@ -92,8 +108,11 @@ mount => DOM이 생성되고 웹 브라우저상에 나타나는 것
 /*
 update => Props 나 state가 바뀌었을 때 업데이트 하는 것
 업데이트될 때 호출되는 메서드
+(컴포넌트가 다시 렌더링될 때 순서대로 호출)
 - getDerrivedStateFromProps
 - shouldComponentUpdate
+ (render)
+ (getDerivedStateFromProps)
 - componentDidUpdate
 */
 
