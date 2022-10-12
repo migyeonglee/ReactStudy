@@ -1,22 +1,41 @@
+import React, { Component } from "react";
 import './App.css';
-// import Map from './map';
-// import Filter from './filter';
-// import Event_ex from './ex/Event_ex';
-import Test1 from './test1'
-import Test2 from './test2'
-function App() {
+import Ref from './ref';
+import ScrollBox from './ScrollBox';
+import LifeCycle from './lifeCycle';
+// 색상 코드 return 하는 코드
+function getRandomColor() {
+  // floor : random 하는 숫자 가져옴
+  return "#" + Math.floor(Math.random() * 16777215).toString(16);
+}
+class App extends Component {
+  state = {
+    color: "#000000",
+    value: true,
+  };
 
+  handleClick = () => {
+    this.setState({
+      // 컴포넌트 밖에 선언되어 있음
+      color: getRandomColor(),
+    });
+  };
 
+  render() {
   return (
    <>
-   {/* <Map></Map> */}
-   {/* <Filter></Filter> */}
-    {/* <hr /> */}
-    {/* <Event_ex></Event_ex> */}
-    <Test1></Test1>
-    <Test2></Test2>
+    <Ref></Ref>
+   <hr />
+  <ScrollBox></ScrollBox>
+   <hr />
+   <div>
+        <button onClick={()=>{this.setState({value: !this.state.value})}}>컴포넌트 바껴라!</button>
+        <button onClick={this.handleClick}>랜덤 색상</button>
+        { this.state.value ? <LifeCycle color={this.state.color} /> : <div />}
+    </div>
    </>
   );
+}
 }
 
 export default App;
