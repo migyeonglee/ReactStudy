@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 
 const Map = () => {
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
       //  let list = ["a","b","c","d","e"];
   //  items => 배열이 담김
   //  let items = list.map((value, id, arr) => {
@@ -20,6 +21,7 @@ arr : 현재 반복을 돌고 있는 배열
 items : "return value + id;"로 만들어진 배열
 */
     // let list = ["a","b","c","d","e"];
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 let listTemp =[
     {id :1, value : "a"},
     {id :2, value : "b"},
@@ -29,10 +31,10 @@ let listTemp =[
 ];
     let [list, setList]=useState(listTemp);
     let [inputValue, setInput]=useState("");
-    // let newList = list.concat({id : 6, value : inputValue});
-    // setList(newList);
+let [inputId, setInputId]=useState(list.length+1);
     return (
         <>
+
         {/* <ul> */}
       {/* <li>a</li>
       <li>b</li>
@@ -45,16 +47,29 @@ let listTemp =[
       {/* {list.map((value, id) => {return <li key = {id}>{value}</li>})} */}
       {/* <Map></Map> */}
    {/* </ul> */}
-        <input type="text " onChange={(e)=> {setInput(e.target.value);}} />
+
+{/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+        <input type="text "  value={inputValue}onChange={(e)=> {setInput(e.target.value);}} />
         <button onClick={()=>{
             // id가 6인 곳에 추가 
             //  let newList = list.concat({id : 6, value : inputValue});
-             let newList = list.concat({id : list.length+1, value : inputValue});
-             setList(newList);
-        }}>추가</button>
+            let newList = list.concat({id : inputId, value : inputValue});
+            setList(newList);
+            setInputId(inputId+1);
+            // 추가 시 input 창 안에 있는 text가 ""으로 변경되도록함
+            setInput("");
+            }}>추가</button>
         <ul>
-             {list.map((value) => {return <li key = {value.id}>{value.value}</li>})}
+             {/* {list.map((value) => {return <li key = {value.id}>{value.value}</li>})} */}
+             {/* 자기 차례에 있는 값을 갖고 있음 */}
+             {list.map((value) => {return <li key = {value.id}
+             onDoubleClick={(e)=>{let newList= list.filter((value2)=>{
+                 return value2.id !== value.id })
+                setList(newList);
+             }}>
+                {value.value}</li>})}
         </ul>
+{/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
         </>
     );
 };
