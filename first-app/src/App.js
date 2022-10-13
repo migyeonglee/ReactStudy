@@ -1,20 +1,20 @@
-import './App.css';
+import './app.scss';
 import React, { Component } from 'react';
-// import Hooks from './Hooks';
-// import HooksTest from './HooksTest';
-import HooksNext from './HooksNext';
+
 class App extends Component {
-  state = {
-    value: true
-  }
+
   render() {
     return (
       <>
-      {/* <Hooks></Hooks> */}
-        {/* <button onClick={()=>{this.setState({value: !this.state.value})}}>컴포넌트 바껴라!</button>
-        <hr />
-        <HooksTest></HooksTest> */}
-        <HooksNext></HooksNext>
+    <div className='SassTest'>
+      <div className='box red'></div>
+      <div className='box orange'></div>
+      <div className='box yellow'></div>
+      <div className='box green'></div>
+      <div className='box skyblue'></div>
+      <div className='box blue'></div>
+      <div className='box purple'></div>
+    </div>
       </>
     );
   }

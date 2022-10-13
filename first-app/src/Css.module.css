@@ -1,0 +1,88 @@
+.test{
+    color: var(--color-red);
+}
+
+:root{
+    --color-red : red;
+    --color-orange : orange;
+    --color-yellow : yellow;
+    --color-green : green;
+    --color-blue : blue;
+    --color-navy:navy;
+    --color-purple:purple;
+    --color-black:black;
+    --color-white:white;
+    --box-radius: 50px;
+    --eye-radius:10px;
+
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    border-radius: var(--box-radius);
+}
+.eye1{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    border-radius: var(--eye-radius);
+    background-color: var(--color-white);
+}
+.eye2{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 2px;
+    top: 5px;
+    border-radius: var(--eye-radius);
+    background-color: var(--color-black);
+}
+.box1{
+    position: relative;
+    background-color:var(--color-red) ;
+}
+.box2{
+    left: 60px;
+    top : 30px;
+    position:absolute;
+    background-color:var(--color-orange) ;
+}
+.box3{
+    left: 120px;
+    top : 50px;
+    position:absolute;
+    background-color:var(--color-yellow) ;
+}
+.box4{
+    left: 180px;
+    top : 70px;
+    position:absolute;
+    background-color:var(--color-green) ;
+}
+.box5{
+    left: 240px;
+    top : 90px;
+    position:absolute;
+    background-color:var(--color-blue) ;
+}
+.box6{
+    left: 300px;
+    top : 100px;
+    position:absolute;
+    background-color:var(--color-navy) ;
+}
+.box7{
+    left: 360px;
+    top : 120px;
+    position:absolute;
+    background-color:var(--color-purple) ;
+    z-index: 1;
+}
+img{
+position: absolute;
+top: 120px;
+height: 100px;
+}
