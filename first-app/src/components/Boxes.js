@@ -23,7 +23,7 @@ export function Box3 ({number}){
     return(
       <>
       <div>
-        <h2>box3 컴포넌트 {number}</h2>
+        <h2>box3 컴포넌트 : {number}</h2>
         <Box4Container></Box4Container>
       </div>
       </>
