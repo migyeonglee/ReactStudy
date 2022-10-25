@@ -11,8 +11,8 @@ const DECREASE = 'counter/DECREASE';
 //         type : INCREASE
 //     }
 // }
-const increase = ()=>({type : INCREASE});
-const decrease = ()=>({type : DECREASE});
+export const increase = ()=>({type : INCREASE});
+export const decrease = ()=>({type : DECREASE});
 
 let initialState = { 
     number : 0
